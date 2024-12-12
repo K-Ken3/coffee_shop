@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/user_info.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>User Information | Coffee Shop</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <h1 class="title">Cof<span>fee</span></h1>
+            <p class="subtitle">Coffee<span>Shop</span></p>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+                <li><a href="History.html">ABOUT US</a></li>
+                <button onclick="document.location='login.html'">LOGOUT</button>
+            </ul>
+        </div>
+        <div class="user-info">
+            <h1>Enter Your Information</h1>
+            <form action="process_user_info.php" method="POST">
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="address" placeholder="Street Address" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

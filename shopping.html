@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/shopping.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Shopping | Coffee Shop</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <h1 class="title">Cof<span>fee</span></h1>
+            <p class="subtitle">Coffee<span>Shop</span></p>
+            <ul class="menu">
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="ContactUs.html">CONTACT</a></li>
+                    <li><a href="History.html">ABOUT US</a></li>
+                    <li><a href="checkout.php"><img src="images/cart-icon.png" alt="Cart" class="cart-icon"></a></li>
+                    <li><a href="logout.html" class="logout-button">Logout</a></li>
+                
+            </ul>
+        </div>
+        <div class="shopping">
+            <h1>Select Your Products</h1>
+            <div class="products">
+                <div class="product-card">
+                    <h2>Coffee</h2>
+                    <button onclick="addToCart('Coffee')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <h2>Tea</h2>
+                    <button onclick="addToCart('Tea')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <h2>Snacks</h2>
+                    <button onclick="addToCart('Snacks')">Add to Cart</button>
+                </div>
+            </div>
+            <button id="continueButton">Continue</button>
+        </div>
+    </div>
+    <script>
+        let cartItems = [];
+
+        function addToCart(item) {
+            if (!cartItems.includes(item)) {
+                cartItems.push(item);
+            }
+            alert(item + " has been added to your cart!");
+        }
+
+        document.getElementById('continueButton').addEventListener('click', function() {
+            if (cartItems.length === 0) {
+                alert("Please select at least one item before proceeding to the cart.");
+            } else {
+                document.location = 'cart.html';
+            }
+        });
+        document.getElementById('continueButton').addEventListener('click', function() {
+    if (cartItems.length === 0) {
+        alert("Please select at least one item before proceeding.");
+    } else {
+        document.location = 'checkout.php'; // Redirect to the checkout page
+    }
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>Register | Coffee Shop</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <h1 class="title">Cof<span>fee</span></h1>
+            <p class="subtitle">Coffee<span>Shop</span></p>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+                <li><a href="History.html">ABOUT US</a></li>
+                <button onclick="document.location='login.html'">LOGIN</button>
+            </ul>
+        </div>
+        <div class="registration">
+            <h1>Register</h1>
+            <form action="process_registration.php" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
